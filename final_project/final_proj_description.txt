@@ -1,0 +1,70 @@
+Final Project:
+
+Purpose:
+  To put all you have learned together to create a stereo FM alarm 
+  clock radio with inside/outside temperature indications.
+  
+Project Specifications; 
+
+   Radio
+   a. Using the supplied FM radio module, the FM receiver will cover
+      the standard FM broadcast band of 88-108 MHz.
+   b. The radio will have digitally adjustable volume control and
+      tuning.  Digital encoders will be used for both functions.
+   c. The LED display will display either the current frequency if you
+      are tuning the radio, else the time.  The inside and outside
+      temperature and alarm mode will be displayed on the LCD. 
+      For extra credit, the relative signal strength may be shown on the 
+      bar graph display or the LCD. If you use the LCD, choose a good way to 
+      display this. One way would be to show more asterisks with increasing
+      signal strength.
+
+     16x2 LCD display 
+     -----------------------------------------------------------------
+     | A | L | A | R | M |   | S | = | * | * | * | * | * | * | * | * |
+     |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+     | 7 | 2 | F |   | 2 | 2 | . | 2 | C |   |   |   |   |   |   |   |
+     -----------------------------------------------------------------
+     *The alarm mode is described below.
+
+   d. Since the FM station allocations are always on an odd frequency
+      at 100kHz multiples (88.1, 88.3, 88.5.....), the radio will 
+      only display these frequencies.
+
+   Clock
+   a. The system will continuously display the time in minutes and hours
+      on the LED display unless you are tuning the radio. 
+   b. The clock will blink the colon between hours and minutes.
+   c. The current time and alarm time settings will be user adjustable.
+   d. When the alarm goes off, it can be an alarm tone, or turn on the 
+      radio the preset station.  
+   e. A 10 second snooze function will be implemented. (changeable to 10min)
+   f. The alarm mode (alarm or radio) is to be displayed on the LCD.
+
+   Temperature
+   a. Both inside and outside temperatures shown on LCD.
+   b. Integer values of temperature.
+   c. Temperature updated about once every second
+   c. One tenth degree readout for extra credit
+   
+   User Interface
+   a. The user interface for setting the clock is up to the designer.
+      It should be easy and intuitive to use.
+
+   Extra credit (total max = 25%)
+   a. Beaver fight song alarm (+5%)
+   b. Station presets. (+10%)
+   c. Tone or balance controls. (+10%) 
+   d. Use of the Mega48 for something (+10 max)
+   e. Special implementation of circuitry (+10 max)
+   f. Signal strength indication (5%)
+   g. AM radio functionality (10%)
+   h. One-tenth degree readout for extra credit (5%)
+
+   What to show for your work:
+   *Final schematic diagram for your project.
+   *Pseudocode or flow chart for your code you added if used.
+   *Printout of your code.  Use a2ps or format to make easily readable.
+   *Demonstrate working system to TA by before deadline 
+
+Lab Weighting = 0.25

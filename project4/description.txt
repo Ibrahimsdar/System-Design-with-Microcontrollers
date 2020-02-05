@@ -1,0 +1,101 @@
+ECE473  Lab4:
+
+Purpose:
+  Using timer/counters in all modes: timer, pwm, oscillator
+  Using TCNT0 as a realtime clock.
+  Building the audio amplifier sub-assembly.
+  Accessing the LCD display.
+  Making binary to bcd to ascii conversions.
+  Using the analog to digital converter.
+  Understanding human light sensitivity levels
+  To fix anything else that seems flaky before we go on!
+  Creating user interfaces
+
+Project Specification:
+  *Write code to implement an alarm clock which continuously displays the 
+   time in minutes and hours on the LED display.
+  *Using a CdS cell and the ADC, implement a PWM LED brightness controller.
+   Use a PWM output from TCNT2 which drives PORTB bit seven to implement 
+   the dimming function.  PORTB bit seven was already connected in lab 2.  
+  *Dimming should not flicker at dimness boundaries
+  *The dimming should be pretty continuous to the eye.
+  *The display colon will blink on and off at 1 sec intervals.
+  *The time and alarm settings are to be user adjustable using the 
+   push buttons and encoders. How you implement this user interface is 
+   completely up to you. You may petition for bonus points if your UI is
+   clever. Please label your push buttons for testing.  
+  *The alarm sound is to be a tone or annoying beep at a frequency of your 
+   choice. Use TCNT1 as the programmable oscillator to create the alarm tone(s). 
+   You may use any Port C pin or Port D pins 2-7 as the output for the alarm
+   output.
+   For extra credit, you can implement the alarm as the Beaver fight song.
+  *You will implement a 10 minute snooze function....but please set it up 
+   for 10 seconds for testing purposes.
+  *You may implement your clock as 12hr or 24hr format. Making this switchable
+   could add some extra credit.
+  *The alarm armed indication is to be displayed on the LCD.  It could simply 
+   read "ALARM".  
+  *An alarm armed indication on the LED display should also be implemented.  
+   Again, its your choice on how this is done. 
+  *The alarm will share the audio amplifier with the radio. The alarm should 
+   thus sound at the same level as the radio.  The radio output level is 
+   approximately 75mVpp. Provide an extra input to both channels of the audio 
+   amplifier.  Use the OPAMP as a summer for these signals.  
+  *Determine how to set the input amplitude to the audio amplifier appropriate 
+   for our system.  We are aiming for about 100-200mW RMS (8 ohms) of audio at 
+   the speakers. 
+  *The audio level is determined by the voltage of a pin on the audio amplifier.
+   Create this voltage with a PWM created by TCNT3. 
+
+Before Lab: 
+  *Draw the schematic of the analog circuitry that allows you to play either 
+   the alarm or radio through the audio amplifier.  Make sure the alarm goes 
+   through both channels of the amplifier.
+  *Determine how you are going to implement the user interface to the clock. 
+   Some questions to ask are...
+     -increment the count by encoders or buttons
+     -how do you distinguish AM and PM on the alarm?
+     -how long should the alarm go off?
+
+Assembly:
+  *Build circuit that will merge the alarm input to the audio amplifier on the
+   protoboard. The audio amplifier will also be placed on the protoboard.
+   This will require some fun design. 
+  *CdS cell should be located on the protoboard.
+  *You should fix anything that is marginal, nearly broken, loose
+   or is not quite right in software or hardware.
+
+Software:
+  *Write out pseudocode or flow chart of your software (suggestion).
+  *Use the 32kHz oscillator to operate the clock time base for TCNT0.
+  
+Testing:
+  *Clock and alarm are settable.
+  *Clock keeps correct time.  (Test over 24hrs if possible.)
+  *Alarm goes off as it should.
+  *10sec snooze function works correctly.
+  *Dimming feature is smooth.
+
+What to show for your work:
+  *Schematic diagram you used to wire things up 
+  *Printout of your code.  Use a2ps format.  
+  *Demonstrate working system to TA by due date 
+
+Grading:
+  *Circuit function                   +70% (demo system in lab)
+    -performs as expected, clock keeps time, UI is good 
+    -adjustments not smooth           -deduct 10%
+    -dim display/flickers             -deduct  5%
+    -jumpy dimming feature            -deduct  5%
+    -awkward user interface           -deduct  5%
+    -other abnormality                -deduct  5% (for each distinct problem)
+
+  *Documentation                         +30%
+    -complete, neat, correct schematic
+    -code well written, commented
+    -sloppy or wrong schematic           -deduct 15%
+    -bogus analysis of amplifier values  -deduct 15%
+    -poorly commented code               -deduct 10%
+
+Lab weighting = 0.20
+
