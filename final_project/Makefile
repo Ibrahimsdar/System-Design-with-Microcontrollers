@@ -1,9 +1,9 @@
 #PRG             =mega48_code####### 48
-PRG             =lab6_code
+PRG             =main
 #OBJS            =mega48_code.o uart_functions_m48.o lm73_functions.o twi_master.o######## 48
-OBJS            =lab6_code.o hd44780.o lm73_functions.o twi_master.o uart_functions.o si4734.o 
+OBJS            =main.o hd44780.o lm73_functions.o twi_master.o uart_functions.o si4734.o 
 #SRCS            =mega48_code.c uart_functions_m48.c lm73_functions.c twi_master.c######## 48
-SRCS            =lab6_code.c hd44780.c lm73_functions.c twi_master.c uart_functions.c si4734.c
+SRCS            =main.c hd44780.c lm73_functions.c twi_master.c uart_functions.c si4734.c
 
 MCU_TARGET     = atmega128
 #MCU_TARGET     = atmega48
