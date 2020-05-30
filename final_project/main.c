@@ -1,4 +1,4 @@
-// lab6_code.c 
+// main.c 
 // Written by Ibrahim Alarifi
 // Written on 12/12/2019
 
